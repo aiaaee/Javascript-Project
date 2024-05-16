@@ -10,22 +10,15 @@ let successMessage = document.querySelector(".message .success")
 
 
 startCounter.addEventListener("click" , function(e){
-    // console.log(e)
-    // let seconds = inputCounter.value 
-    // console.log(seconds)
-    // console.log(typeof(seconds))
+   
     let seconds = parseInt(inputCounter.value)
     
     if(isNaN(seconds)){
-        // console.log("this is a nan")
         errorElement.textContent = "زمان را به درستی وارد کنید ."
         errorElement.classList.add("active") ; 
         return ; 
-        // ادامه کد هایی که مینویسیم اجرا نمیشه هیچوقت return:
     }
     errorElement.classList.remove("active")
-    // با استفاده از ریمو کردن اکتیو میتوانیم دوباره به seconds برسیم . 
-    // startBox.style.display = "none"
     startBox.classList.remove("active")
     timercircle.style.display = "block" ; 
     timerNum.textContent = seconds
@@ -38,7 +31,6 @@ startCounter.addEventListener("click" , function(e){
      let timeId = setInterval(() => {
         if(lastPercent){
             timercircle.classList.remove(lastPercent)
-            // هربار پرسنت قبلی پاک میشود و بعد پرسنت جدید نوشته میشود . 
         }
         if(seconds <= 0 ){
             clearInterval(timeId) ; 
@@ -48,15 +40,8 @@ startCounter.addEventListener("click" , function(e){
             successMessage.style.display = "block"
             inputCounter.value = ""
             return 
-            // timercircle.classList.remove(lastPercent)
         }
         
-        // if(lastPercent){
-        //     timercircle.classList.remove(lastPercent)
-        //     // هربار پرسنت قبلی پاک میشود و بعد پرسنت جدید نوشته میشود . 
-        // }
-
-
 
 
 

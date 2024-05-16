@@ -10,10 +10,7 @@ let successMessage = document.querySelector(".message .success")
 
 
 startCounter.addEventListener("click" , function(e){
-    // console.log(e)
-    // let seconds = inputCounter.value 
-    // console.log(seconds)
-    // console.log(typeof(seconds))
+
     let seconds = parseInt(inputCounter.value)
     
     if(isNaN(seconds)){
@@ -21,11 +18,9 @@ startCounter.addEventListener("click" , function(e){
         errorElement.textContent = "زمان را به درستی وارد کنید ."
         errorElement.classList.add("active") ; 
         return ; 
-        // ادامه کد هایی که مینویسیم اجرا نمیشه هیچوقت return:
     }
     errorElement.classList.remove("active")
-    // با استفاده از ریمو کردن اکتیو میتوانیم دوباره به seconds برسیم . 
-    // startBox.style.display = "none"
+    
     startBox.classList.remove("active")
     timercircle.style.display = "block" ; 
     timerNum.textContent = seconds
@@ -35,11 +30,9 @@ startCounter.addEventListener("click" , function(e){
  
      let originalSeconds = seconds ; 
      let lastPercent = 'p100' 
-     // داخل کد های اچ تی ام ال هم باید حتما p100 را وارد کنیم.
      let timeId = setInterval(() => {
         if(lastPercent){
             timercircle.classList.remove(lastPercent)
-            // هربار پرسنت قبلی پاک میشود و بعد پرسنت جدید نوشته میشود . 
         }
         if(seconds <= 0 ){
             clearInterval(timeId) ; 
@@ -52,10 +45,7 @@ startCounter.addEventListener("click" , function(e){
             // timercircle.classList.remove(lastPercent)
         }
         
-        // if(lastPercent){
-        //     timercircle.classList.remove(lastPercent)
-        //     // هربار پرسنت قبلی پاک میشود و بعد پرسنت جدید نوشته میشود . 
-        // }
+   
 
 
 
