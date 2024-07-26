@@ -10,7 +10,7 @@ Make your websites dynamic and interactive with JavaScript! You'll create featur
 Not to be confused with Java (programming language), Javanese script, or ECMAScript.
 ".js" redirects here. For the Microsoft dialect used in Internet Explorer.
 
-![Unofficial_JavaScript_logo_2 svg](https://github.com/user-attachments/assets/538619d2-bf42-406d-b9e3-0ca7a0ac40aa)
+![jsheader](https://github.com/user-attachments/assets/b182ae72-f7d7-4d82-927f-14e54b8f059f)
 
 
 JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
