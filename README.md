@@ -20,3 +20,5 @@ JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programm
 ![ES6-1024x512-1](https://github.com/user-attachments/assets/4a00a186-fd57-4a1b-bf9a-c4003cf78464)
 
 The standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). As soon as one browser implements a feature, we try to document it. This means that cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features. Most of the time, this happens between the stages 3 and 4, and is usually before the spec is officially published.
+
+Projects are available in repository. 
