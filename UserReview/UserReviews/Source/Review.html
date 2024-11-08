@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        :root{
+            --color :  rgba(128, 128, 128, 0);
+        }
+        *{
+            background-color: rgb(91, 92, 143);
+        }
+        body{
+            background-color: rgb(91, 92, 143);
+        }
+        .wrapper{
+            background-color: rgb(91, 92, 143);
+            border: 1px solid inherit;
+            margin-top: 120px;
+            height: auto;
+            width: 850px;
+            margin: 120px auto;
+            display: grid;
+            grid-template-columns:50% 50%;
+        }
+        .wrapper-image img{
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper-auth{
+            display: block;
+            background-color: rgb(5, 5, 27);
+        }
+        h1{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: initial;
+            color: lightgray;
+            text-align: center;
+            font-size: 50px;
+            margin: 50px auto;
+            border-bottom: 5px solid white ;
+            width: fit-content;
+        } 
+        form{
+            background-color: rgba(128, 128, 128, 0);
+            margin: 18px; 
+            border: 1px solid inherit;
+        }
+        fieldset{
+            border-radius: 12px;
+            background-color: rgba(211, 211, 211, 0.349);
+            padding: 14px;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+        button{
+            background-color: rgb(12, 12, 94);
+            border: 1px solid rgb(28, 28, 119);
+            border-radius: 8px;
+            padding:5px 12px;
+            color:white;  
+        }
+        .span-bg-color{
+            border: 1px solid rgb(28, 28, 119) ;
+
+            background-color: rgb(12, 12, 94);
+        }
+        .row-class-auth div{
+            background-color:rgba(128, 128, 128, 0);
+        }
+        .hidden{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-image">
+            <img src="images/MV5BOTU1NzQ4NjMtN2RlNi00MmIwLTk0OTYtMzc2MTQyZDBiMTc4XkEyXkFqcGc@._V1_.jpg" alt="">
+        </div>
+        <div class="wrapper-auth">
+            <h1>Auth reviews</h1>
+            <form>
+                <fieldset class="m-3">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text span-bg-color text-white" id="addon-wrapping">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group mt-3">
+                        <span class="span-bg-color text-white input-group-text">password</span>
+                        <input type="password" placeholder="********" aria-label="First name" class="form-control">
+                    </div>
+                    <button class="mt-3 " >Submit</button>
+                </fieldset>
+                <fieldset class="m-3 hidden">
+                    <div class="row row-class-auth" style="background-color: var(--color);">
+                        <div class="col-md-6">
+                            <label for="validationDefault01" class="form-label text-white" style="background-color: var(--color); font-size:17px">First name :</label>
+                            <input type="text" class="form-control" id="validationDefault01" placeholder="Mark" required>
+                        </div>
+                        <div class="col-md-6" style="background-color: var(--color);">
+                            <label for="validationDefault02" class="form-label text-white" style="background-color: var(--color); font-size:17px">Last name :</label>
+                            <input type="text" class="form-control" id="validationDefault02" placeholder="Otto" required>
+                        </div>
+                    </div>
+                    <div style="background-color:var(--color);">
+                        <label for="customRange2" class="form-label text-white fs-5 mt-2"  style="background-color: var(--color);">Stars:</label>
+                        <input type="range" class="form-range" value="1" min="0" max="5" id="customRange2" style="color: red;">
+                    </div>
+                    <div class="mb-3" style="background-color: var(--color);">
+                    <label for="exampleFormControlTextarea1" style="background-color:var(--color)" class="form-label text-white fs-5" >Comment :</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="write your idea about film..."></textarea>
+                    <button class="btn btn-success mt-3">Submit</button>
+                </div>
+                
+                </fieldset>
+            </form>
+        </div>
+        <div class="user_review_table">
+
+        </div>
+    </div>
+</body>
+</html>
