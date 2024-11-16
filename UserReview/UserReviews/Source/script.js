@@ -26,7 +26,7 @@ form.addEventListener('submit' , function(e){
 })
 
 window.addEventListener("load" , function(){
-    let createNewDB = indexedDB.open(dbName , version=6) ; 
+    let createNewDB = indexedDB.open(dbName , version=14) ; 
     ResponseDatabase(createNewDB)
 })
 
@@ -41,7 +41,9 @@ function ResponseDatabase(database_name){
         db = event.target.result ; 
         console.log('Upgraded : ' , event)
         if(! db.objectStoreNames.contains('User')){
-            db.createObjectStore('User') ; 
+            db.createObjectStore('User' , {
+                keyPath : 'Userid'
+            }) ; 
         }
         // if( db.objectStoreNames.contains('User')){
         //     db.deleteObjectStore('User')
@@ -59,13 +61,20 @@ window.addEventListener('keypress' , function(){
 
 btn.addEventListener('click' , function(){
     let newUser = {
-        id :Math.floor(Math.random() * 9999 ) ,
+        Userid :Math.floor(Math.random() * 9999 ) ,
         name : userNameValue , 
         firstname : firstNameValue , 
         stars : starsValue , 
         comment : commentValue 
     }
-    console.log(newUser);
+
+    let tx = db.transaction('User' , 'readwrite') ; 
+    transactionFunctions(tx) ; 
+    let store = tx.objectStore('User')
+    let request = store.add(newUser)
+    transactionFunctions(request)
+
+
     ClearInputs()
 })
 
@@ -76,4 +85,14 @@ function ClearInputs(){
     firstname.value = '' 
     stars.value = 0 
     comment.value = ''
+}
+
+
+function transactionFunctions(tx_name){
+    tx_name.addEventListener('success',  function(success){
+        console.log('transaction was succesfully!' , success)
+    })
+    tx_name.addEventListener('error',  function(error){
+        console.log('transaction was Failed!' , error )
+    })
 }
