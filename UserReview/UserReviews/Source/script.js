@@ -19,6 +19,9 @@ let commentValue ;
 
 let db = null ; 
 
+let comments = document.querySelector('.comments')
+let show = document.querySelector('.showComments'); 
+let userComment  ; 
 form.addEventListener('submit' , function(e){
     e.preventDefault() ; 
     fieldset1.classList.add(hidden) ;
@@ -26,7 +29,7 @@ form.addEventListener('submit' , function(e){
 })
 
 window.addEventListener("load" , function(){
-    let createNewDB = indexedDB.open(dbName , version=14) ; 
+    let createNewDB = indexedDB.open(dbName , version=25) ; 
     ResponseDatabase(createNewDB)
 })
 
@@ -74,7 +77,7 @@ btn.addEventListener('click' , function(){
     let request = store.add(newUser)
     transactionFunctions(request)
 
-
+    getUser() ; 
     ClearInputs()
 })
 
@@ -96,3 +99,38 @@ function transactionFunctions(tx_name){
         console.log('transaction was Failed!' , error )
     })
 }
+
+
+function getUser(){
+    let tx = db.transaction('User' , 'readonly');
+    let store = tx.objectStore('User') ;
+    let request = store.getAll() ; 
+    
+    request.addEventListener("success" , function(event){
+        console.log("Get Success:" , event); 
+        let allUsers = event.target.result ; 
+        console.log(allUsers) ; 
+
+        
+        allUsers.map(items => {
+            userComment =     `<div class="C_user">
+            <div class="header">
+                <p class="name">${items.firstname}</p>
+                <p class="star">${items.stars}</p>
+            </div>
+            <p class="texture">${items.comment}</p>
+            <hr>
+            </div>`
+        })
+    })
+
+    request.addEventListener('error' , (error) => {
+        console.log('Get Error:' , error) ; 
+    })
+}
+
+show.addEventListener("click" , function(){
+    comments.classList.remove('hidden') ;
+    comments.innerHTML = userComment
+})
+

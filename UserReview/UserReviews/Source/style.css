@@ -16,6 +16,8 @@ body{
     margin: 120px auto;
     display: grid;
     grid-template-columns:50% 50%;
+    margin-bottom: 10px ;
+
 }
 .wrapper-image img{
     width: 100%;

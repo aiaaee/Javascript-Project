@@ -6,6 +6,51 @@
     <title>Document</title>
     <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./Style.css">
+    <style>
+        .comments{
+            border: 1px solid inherit;
+            width: 900px;
+            margin: 0 auto;
+            border-radius: 12px;
+            background-color: rgb(197, 197, 253);
+        }
+        .comments h4{
+            text-align: left;
+            margin: 18px;
+            color:black;
+            background-color: rgb(197, 197, 253);
+            padding-bottom: 12px; 
+            padding-top: 12px;
+            border-bottom: 1px solid black;
+        }
+        .comments .C_user , .comments .C_user p , .comments .C_user span{
+            background-color: rgb(197, 197, 253);
+        }
+        .C_user{
+            padding: 10px;
+            margin:20px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(197, 197, 253);
+        }
+        .C_user .name{
+            font-weight: bold;
+            border-bottom: 2px solid black;
+        }
+        .C_user .star{
+            color: green;
+            margin-right: 22px;
+            font-weight: 100;
+        }
+        .C_user .texture {
+            padding-top: 0;
+            margin-top: -8px;
+            padding-left: 6px;
+            line-height: 23px;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -46,13 +91,24 @@
                     <label for="exampleFormControlTextarea1" style="background-color:var(--color)" class="form-label text-white fs-5" >Comment :</label>
                     <textarea class="form-control Comment" id="exampleFormControlTextarea1" rows="3" placeholder="write your idea about film..."></textarea>
                     <button type="submit" class="btn btn-success mt-3 button_submit">Submit</button>
+                    <button class="btn btn-secondary mt-3 showComments">Show Comments</button>
                 </div>
                 </fieldset>
             </form>
         </div>
-        <div class="user_review_table">
-            
-        </div>
+    </div>
+    <div class="comments hidden">
+        <h4>
+            Comments
+        </h4>
+        <!-- <div class="C_user">
+            <div class="header">
+                <p class="name">Name: </p>
+                <p class="star">Star</p>
+            </div>
+            <p class="texture">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem impedit adipisci, numquam est temporibus perspiciatis molestiae assumenda veritatis corporis ut, harum modi natus quam alias ratione quasi necessitatibus perferendis eaque?</p>
+            <hr>
+        </div> -->
     </div>
     <script src="script.js"></script>
 </body>
