@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            background-color: rgb(42, 100, 119);
+        }
+        body{
+            color:white;
+        }
+        
+        ul{
+            border: 1px solid inherit;
+            background-color: rgb(59, 59, 59);
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            background-color: rgb(59, 59, 59);
+            list-style: none;
+            text-decoration: none;
+            padding: 10px;
+        }
+        header a{
+            text-decoration: none;
+            background-color: rgb(59, 59, 59);
+            font-size: 15px;
+        }
+        header li:first-child{
+            color: aqua;
+        }
+
+        h2{
+            margin: 10px auto;
+            text-align: center;
+        }
+        .intro{ 
+            text-align: center;
+        }
+        a{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .display{
+            width: 150px;
+            background-color: white;
+            margin:10px auto;
+            display: none;
+        }
+        .display img{
+            margin-top: 3px;
+            padding-top: 5px;
+            padding-left: 14px;
+            background-color: white;
+            text-align: center;
+            border-radius: 30px;
+        }
+        .display p{
+            text-align: center;
+            
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a>Random</a>
+            </li>
+            <li>
+                <a>Home</a>
+            </li>
+            <li>
+                <a>Shop</a>
+            </li>
+            <li>
+                <a>Contact Us</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <h2>Random Image</h2>
+        <div class="intro">For sure about the random API , please Enter <a style="color: wheat;" class="ClickUser">Click</a></div>
+        
+        <div class="display">
+            <img src="" alt="">
+            <p>Hi my name is </p>
+        </div>
+
+    
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
